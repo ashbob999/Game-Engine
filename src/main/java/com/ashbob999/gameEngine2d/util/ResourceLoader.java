@@ -18,8 +18,10 @@ public class ResourceLoader {
 	/**
 	 * Returns the whole contents of a file as a string
 	 * 
-	 * @param fileName the name of the file
-	 * @return a string containing the whole contents of the file
+	 * @param  fileName    the name of the file
+	 * 
+	 * @return             a string containing the whole contents of the file
+	 * 
 	 * @throws IOException if the file is not found
 	 */
 	public static String loadResource(String fileName) throws IOException {
@@ -34,8 +36,10 @@ public class ResourceLoader {
 	/**
 	 * Returns a list containing every line in the file
 	 * 
-	 * @param fileName the name of the file
-	 * @return a {@link List} containing the lines of the file
+	 * @param  fileName    the name of the file
+	 * 
+	 * @return             a {@link List} containing the lines of the file
+	 * 
 	 * @throws IOException if the file is not found
 	 */
 	public static List<String> readAllLines(String fileName) throws IOException {
@@ -53,8 +57,9 @@ public class ResourceLoader {
 	/**
 	 * Returns a {@link ByteBuffer} of the file at the given path, or {@code null} if the file does not exist
 	 * 
-	 * @param fileName the name of the file
-	 * @return the {@link ByteBuffer} of the file, or {@code null} is the file does not exist
+	 * @param  fileName the name of the file
+	 * 
+	 * @return          the {@link ByteBuffer} of the file, or {@code null} is the file does not exist
 	 */
 	public static ByteBuffer getFileAsBuffer(String fileName) {
 		try {
@@ -95,8 +100,9 @@ public class ResourceLoader {
 	/**
 	 * Returns a {@link InputStream} of the file at the given path, or {@code null} if the file does not exist
 	 * 
-	 * @param fileName the name of the file
-	 * @return the stream of the file, or {@code null} if the file does not exist
+	 * @param  fileName the name of the file
+	 * 
+	 * @return          the stream of the file, or {@code null} if the file does not exist
 	 */
 	public static InputStream getFileAsStream(String fileName) {
 		InputStream in = ResourceLoader.class.getResourceAsStream(fileName);

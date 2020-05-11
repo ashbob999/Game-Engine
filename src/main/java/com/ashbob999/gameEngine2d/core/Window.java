@@ -181,8 +181,9 @@ public class Window {
 	/**
 	 * Determines whether a given key is pressed
 	 * 
-	 * @param keyCode The keyCode of the key
-	 * @return whether the key is pressed
+	 * @param  keyCode The keyCode of the key
+	 * 
+	 * @return         whether the key is pressed
 	 */
 	public boolean isKeyPressed(int keyCode) {
 		return glfwGetKey(windowHandle, keyCode) == GLFW_PRESS;

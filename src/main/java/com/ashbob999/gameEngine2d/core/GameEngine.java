@@ -21,11 +21,12 @@ public class GameEngine implements Runnable {
 
 	/**
 	 * 
-	 * @param window      Title The window title
-	 * @param width       The window width
-	 * @param height      The window height
-	 * @param gameLogic   The game logic class
-	 * @param windowFlags The {@link WindowFlag}s to be set
+	 * @param  window      Title The window title
+	 * @param  width       The window width
+	 * @param  height      The window height
+	 * @param  gameLogic   The game logic class
+	 * @param  windowFlags The {@link WindowFlag}s to be set
+	 * 
 	 * @throws Exception
 	 */
 	public GameEngine(String windowTitle, int width, int height, IGameLogic gameLogic, WindowFlag... windowFlags)

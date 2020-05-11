@@ -33,7 +33,8 @@ public abstract class Hud {
 
 	/**
 	 * 
-	 * @param window
+	 * @param  window
+	 * 
 	 * @throws Exception
 	 */
 	public final void init(Window window) throws Exception {
@@ -59,9 +60,10 @@ public abstract class Hud {
 	 * Loads a specified font and id into memory.<br>
 	 * Returns {@code true} if the font has been successfully loaded
 	 * 
-	 * @param fontFilePath the path to the font file (.ttf)
-	 * @param fontName     the id name of the font to be stored
-	 * @return {@code true} if the font has been successfully loaded
+	 * @param  fontFilePath the path to the font file (.ttf)
+	 * @param  fontName     the id name of the font to be stored
+	 * 
+	 * @return              {@code true} if the font has been successfully loaded
 	 */
 	public final boolean loadFont(final String fontFilePath, final String fontName) {
 		ByteBuffer fontBuffer = ResourceLoader.getFileAsBuffer(fontFilePath);
@@ -106,12 +108,13 @@ public abstract class Hud {
 	/**
 	 * Sets the colour for a given {@link NVGColor} and returns the modified {@link NVGColor} object.
 	 * 
-	 * @param r      the Red channel, in the Range 0-255
-	 * @param g      the Green channel, in the Range 0-255
-	 * @param b      the Blue channel, in the Range 0-255
-	 * @param a      the Alpha channel, in the Range 0-255
-	 * @param colour the {@link NVGColor} to set
-	 * @return the modified {@link NVGColor}
+	 * @param  r      the Red channel, in the Range 0-255
+	 * @param  g      the Green channel, in the Range 0-255
+	 * @param  b      the Blue channel, in the Range 0-255
+	 * @param  a      the Alpha channel, in the Range 0-255
+	 * @param  colour the {@link NVGColor} to set
+	 * 
+	 * @return        the modified {@link NVGColor}
 	 */
 	public final NVGColor setColour(int r, int g, int b, int a, NVGColor colour) {
 		colour.r(r / 255.0f);
@@ -126,11 +129,12 @@ public abstract class Hud {
 	 * Returns a {@link NVGColor} object that has been set to the given rgba values (this modifies a private
 	 * {@link NVGColor} object), so it should not be used to store a colour
 	 * 
-	 * @param r the Red channel, in the Range 0-255
-	 * @param g the Green channel, in the Range 0-255
-	 * @param b the Blue channel, in the Range 0-255
-	 * @param a the Alpha channel, in the Range 0-255
-	 * @return the modified {@link NVGColor}
+	 * @param  r the Red channel, in the Range 0-255
+	 * @param  g the Green channel, in the Range 0-255
+	 * @param  b the Blue channel, in the Range 0-255
+	 * @param  a the Alpha channel, in the Range 0-255
+	 * 
+	 * @return   the modified {@link NVGColor}
 	 */
 	public final NVGColor getColour(int r, int g, int b, int a) {
 		tempColour.r(r / 255.0f);
@@ -175,8 +179,9 @@ public abstract class Hud {
 	/**
 	 * Returns a boolean stating whether a specified font has been loaded given its {@code fontName}
 	 * 
-	 * @param fontName the name given to the stored font
-	 * @return {@code true} if the specified font has been loaded
+	 * @param  fontName the name given to the stored font
+	 * 
+	 * @return          {@code true} if the specified font has been loaded
 	 */
 	public final boolean isFontLoaded(final String fontName) {
 		return fonts.containsKey(fontName);
